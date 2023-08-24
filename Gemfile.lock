@@ -1,5 +1,4 @@
 GEM
-  remote: https://rubygems.org/
   specs:
     coffee-script (2.4.1)
       coffee-script-source
@@ -62,6 +61,7 @@ GEM
       concurrent-ruby (~> 1.0)
 
 PLATFORMS
+  arm64-darwin-21
   x86_64-linux-musl
 
 DEPENDENCIES
