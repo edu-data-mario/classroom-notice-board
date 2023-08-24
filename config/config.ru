@@ -1,7 +1,8 @@
 require 'dashing'
 
 configure do
-  set :auth_token, 'YOUR_AUTH_TOKEN'
+  set :auth_token, 'LIVING_FOR_TODAY'
+  set :default_dashboard, 'team' #<==== set default dashboard like this
 
   # See http://www.sinatrarb.com/intro.html > Available Template Languages on
   # how to add additional template languages.
