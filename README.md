@@ -1,8 +1,15 @@
 # classroom notice board
 
+<img width="800" alt="image" src="https://github.com/edu-data-mario/classroom-notice-board/assets/134017660/56df286c-6731-4e24-a70b-f73dd1ab61f2">
+
 ### the land of Yoi
 ```bash
 $ docker run --name classNboard -v=<MY_PATH>/dashboards:/dashboards -d -p 8949:3030 visibilityspots/smashing
+
+$ docker run \
+-v=/Users/m2/code/edu/classroom-notice-board/dashboards:/dashboards \
+-v=/Users/m2/code/edu/classroom-notice-board/config:/config \
+-p 8949:3030 visibilityspots/smashing
 
 $ docker ps                                                                                       
 CONTAINER ID   IMAGE                      COMMAND     CREATED              STATUS              PORTS                    NAMES
@@ -16,6 +23,15 @@ $ docker exec -it classNboard sh
 /smashing # uname -a
 Linux e657428e0a75 5.15.49-linuxkit #1 SMP PREEMPT Tue Sep 13 07:51:32 UTC 2022 aarch64 Linux
 ```
+
+### use
+```bash
+$ URL=http://localhost:8949/widgets/poster
+$ curl -d '{ "auth_token": "LIVING_FOR_TODAY", "text": "밥먹고 합시다" }' $URL
+```
+
+### ref
+- https://github.com/Smashing/smashing/wiki/How-To%3A-Change-the-default-dashboard
 
 ### I really appreciate it and show my respect.
 - [Smashing, the spiritual successor to Dashing, is a Sinatra based framework that lets you build excellent dashboards. It looks especially great on TVs.](http://smashing.github.io/smashing) 
