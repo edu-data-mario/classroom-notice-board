@@ -1,0 +1,1 @@
+/smashing/config/config.ru

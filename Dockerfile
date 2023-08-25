@@ -15,6 +15,6 @@ RUN bundle install
 #RUN chmod +x /usr/bin/entrypoint.sh
 #
 #ENTRYPOINT ["entrypoint.sh"]
-#EXPOSE 3030
+EXPOSE 8080
 
-CMD ["smashing", "start", "-p", "3030"]
+CMD ["smashing", "start", "-p", "8080"]

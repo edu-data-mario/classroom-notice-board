@@ -8,7 +8,7 @@
 - server
 ```bash
 # https://hub.docker.com/r/datamario24/classroom-notice-board
-$ docker run --name myClassNotice -p 8949:3030 -d  datamario24/classroom-notice-board
+$ docker run --name myClassNotice -p 8949:8080 -d  datamario24/classroom-notice-board:0.3.1
 ```
 - client
 ```bash
@@ -44,7 +44,9 @@ Linux e657428e0a75 5.15.49-linuxkit #1 SMP PREEMPT Tue Sep 13 07:51:32 UTC 2022 
 ### docker build
 ```bash
 $ docker build -t datamario24/classroom-notice-board:0.2.0 .
+$ docker build --platform linux/amd64 -t datamario24/classroom-notice-board:0.3.0 .
 $ docker push datamario24/classroom-notice-board:0.2.0
+$ docker push datamario24/classroom-notice-board:0.3.0
 ```
 
 ### ref
@@ -52,3 +54,8 @@ $ docker push datamario24/classroom-notice-board:0.2.0
 
 ### I really appreciate it and show my respect.
 - [Smashing, the spiritual successor to Dashing, is a Sinatra based framework that lets you build excellent dashboards. It looks especially great on TVs.](http://smashing.github.io/smashing) 
+
+### ERR
+- failed to fetch an image or build from source: image must be amd64 architecture for linux os, found arm64 linux
+```bash
+```
