@@ -10,11 +10,7 @@
 # https://hub.docker.com/r/datamario24/classroom-notice-board
 $ docker run --name myClassNotice -p 8949:8080 -d  datamario24/classroom-notice-board:0.3.1
 ```
-- client
-```bash
-$ URL=http://localhost:8949/widgets/poster
-$ curl -d '{ "auth_token": "LIVING_FOR_TODAY", "text": "밥먹고 합시다" }' $URL
-```
+- client : https://pypi.org/project/classroom-notice-board-rest-clinet
 
 ----
 # To add or modify better features.
