@@ -1,0 +1,16 @@
+###
+# curl -d '{ "auth_token": "LIVING_FOR_TODAY", "text": "밥먹고 합시다" }' https://classmario.fly.dev/widgets/poster
+POST https://classmario.fly.dev/widgets/poster
+
+{ "auth_token": "LIVING_FOR_TODAY", "text": "가을비 옵니다" }
+
+###
+# curl -d '{ "auth_token": "LIVING_FOR_TODAY", "text": "가을비 옵니다" }' https://classmario.fly.dev/widgets/poster
+POST https://classmario.fly.dev/widgets/poster
+Content-Type: application/x-www-form-urlencoded
+
+{ "auth_token": "LIVING_FOR_TODAY", "text": "bbbb" }
+
+###
+
+

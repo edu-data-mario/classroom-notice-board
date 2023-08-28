@@ -43,10 +43,8 @@ Linux e657428e0a75 5.15.49-linuxkit #1 SMP PREEMPT Tue Sep 13 07:51:32 UTC 2022 
 
 ### docker build
 ```bash
-$ docker build -t datamario24/classroom-notice-board:0.2.0 .
-$ docker build --platform linux/amd64 -t datamario24/classroom-notice-board:0.3.0 .
-$ docker push datamario24/classroom-notice-board:0.2.0
-$ docker push datamario24/classroom-notice-board:0.3.0
+$ docker build --platform linux/amd64 -t datamario24/classroom-notice-board:0.3.2 .
+$ docker push datamario24/classroom-notice-board:0.3.2
 ```
 
 ### ref
@@ -55,7 +53,11 @@ $ docker push datamario24/classroom-notice-board:0.3.0
 ### I really appreciate it and show my respect.
 - [Smashing, the spiritual successor to Dashing, is a Sinatra based framework that lets you build excellent dashboards. It looks especially great on TVs.](http://smashing.github.io/smashing) 
 
-### ERR
-- failed to fetch an image or build from source: image must be amd64 architecture for linux os, found arm64 linux
+### deploy fly.io
 ```bash
+$ fly launch
+$ fly deploy
+$ fly scale count 1
+$ open -a "Google Chrome" https://classmario.fly.dev
+$ curl -d '{ "auth_token": "LIVING_FOR_TODAY", "text": "living for today" }' https://classmario.fly.dev/widgets/poster
 ```
