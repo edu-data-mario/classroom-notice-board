@@ -39,8 +39,8 @@ Linux e657428e0a75 5.15.49-linuxkit #1 SMP PREEMPT Tue Sep 13 07:51:32 UTC 2022 
 
 ### docker build
 ```bash
-$ docker build --platform linux/amd64 -t datamario24/classroom-notice-board:0.3.2 .
-$ docker push datamario24/classroom-notice-board:0.3.2
+$ docker build --platform linux/amd64 -t datamario24/classroom-notice-board:0.4.0 .
+$ docker push datamario24/classroom-notice-board:0.4.0
 ```
 
 ### ref

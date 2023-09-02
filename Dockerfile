@@ -1,20 +1,16 @@
 # https://github.com/Smashing/smashing/wiki/Use-Docker-to-run-Smashing
-FROM ruby:2.6
-RUN mkdir /smashing
+FROM datamario24/ruby314notejs:1.0.3-smashing-new-bundle
 
-RUN apt-get update && \
-    apt-get upgrade -yq && \
-    apt-get install -yq nodejs
+ENV PORT=80
+ENV MAX_CONNS=30
+ENV MAX_PERSISTENT_CONN=1
+ENV THREADPOOL_SIZE=1
 
-COPY . /smashing/
-WORKDIR /smashing
+WORKDIR /app
 
-RUN bundle install
-#RUN bundle install --jobs 80
-#COPY entrypoint.sh /usr/bin/
-#RUN chmod +x /usr/bin/entrypoint.sh
-#
-#ENTRYPOINT ["entrypoint.sh"]
-EXPOSE 8080
+COPY . .
 
-CMD ["smashing", "start", "-p", "8080"]
+CMD smashing start -p ${PORT} \
+    --max-conns ${MAX_CONNS} \
+    --max-persistent-conn ${MAX_PERSISTENT_CONN} \
+    --threadpool-size ${THREADPOOL_SIZE}
